@@ -118,10 +118,10 @@ if (savedstuydents)
     setEditingItem(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    editingItem ? handleUpdate() : handleCreate();
-  };
+   const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  void (editingItem ? handleUpdate() : handleCreate());
+};
 
   const handleDateChange = (e : React.ChangeEvent<HTMLInputElement>) =>{
     setFormData(
